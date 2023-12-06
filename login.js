@@ -46,7 +46,7 @@ function login() {
   const password = document.querySelector("#login-password").value;
   
   if (email === user._email && password === user._password){
-    window.location = ".\src\home.html"
+    window.location = "./home.html"
   }else if (email == "" || password == ""){
     erro("#erro-login")
   }
