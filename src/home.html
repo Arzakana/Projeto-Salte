@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="home.css">
+
+
+<head>
+    <title>Projeto Salte</title>
+</head>
+
+<body id="inicio">
+    <header>
+        <h1>Salte</h1>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#exercicios">Exercícios</a></li>
+            <li><a href="#material">Material</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="banner">   
+            <div class="descricao">
+                <h2>Projeto Salte</h2>
+                <p>Projeto feito para ajudar pessoas com baixa impulsão. Material totalmente completo e validado por um
+                    professor formado em Educação Física. Esse material vai te ajudar a ter um aumento de no mínimo 10
+                    centímetros de salto após o término dos exercícios.</p>
+                <br><br>
+                <p>O curso cobre os seguintes tópicos:</p>
+                <ul>
+                    <li>Técnicas de salto</li> <br>
+                    <li>Exercícios de fortalecimento</li>
+                </ul>
+            </div>
+            <img id="exercicios" src="imagem/imagem-salte.jfif" alt="" style="max-height: 500px;">
+        </div>
+        <div class="exercicios" >
+            <div class="desc-exe">
+                <h2>Exercícios</h2>
+                <p>Assista a estes vídeos para uma demonstração visual das técnicas:</p>
+                <br><br><br>
+                <ul class="lista-niveis">
+                    <li class="bnt"><button onclick="shownivel('.iniciante')">Nível Iniciante</button></li>
+                    <li class="bnt"><button onclick="shownivel('.intermediario')">Nível Intermediário</button></li>
+                    <li class="bnt"><button onclick="shownivel('.avancado')">Nível Avançado</button></li>
+                </ul>
+            </div>
+
+            <div class="iniciante nivel">
+                <h3>Nível Iniciante</h3>
+                <div class="videos">
+
+                    <div class="video1">
+                        <video class="video" width="450" height="410" controls>
+                            <source src="videos/Iniciante fase 1.mp4" type="video/mp4"> Iniciante - Fase 1
+                        </video>
+                        <h4>Iniciante Fase 1</h4>
+                    </div>
+
+                    <div class="video1">
+                        <video class="video" width="450" height="410" controls>
+                            <source src="videos/Iniciante fase 2.mp4" type="video/mp4"> Iniciante - Fase 2
+                        </video>
+                        <h4>Iniciante Fase 2</h4>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="intermediario nivel" style="display: none;">
+                <h3>Nível Intermediário</h3>
+                <div class="videos">
+                    <div class="video1">
+
+                        <video class="video" width="450" height="410" controls>
+                            <source src="videos/Intermediário fase 1.mp4" type="video/mp4"> Intermediário - Fase 1
+                        </video>
+                        <h4>Intermediário Fase 1</h4>
+                    </div>
+
+                    <div class="video1">
+                        <video class="video" width="450" height="410" controls>
+                            <source src="videos/Intermediário fase 2.mp4" type="video/mp4"> Intermediário - Fase 2
+                        </video>
+                        <h4>Intermediário Fase 2</h4>
+
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="avancado nivel" style="display: none;">
+                <h3>Nível Avançado</h3>
+                <div class="videos">
+
+                    <div class="video1">
+                        <video class="video" width="450" height="410" controls>
+                            <source src="videos/Avançado fase 1.mp4" type="video/mp4"> Avançado - Fase 1
+                        </video>
+                        <h4>Avançado Fase 1</h4>
+
+                    </div>
+                    <div class="video1">
+                        <video class="video" width="450" height="410" controls>
+                            <source src="videos/Avançado fase 2.mp4" type="video/mp4"> Avançado - Fase 2
+                        </video>
+                        <h4>Avançado Fase 2</h4>
+
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="material" id="material">
+            <h2>Material</h2>
+            <p>Abaixo encontra-se informações adicionais sobre o curso.</p>
+            <ul>
+                <li><strong>Projeto Salte :</strong> <a href="documento/Projeto salte.pdf" target="_blank">Download
+                        PDF</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function shownivel(classNivel) {
+            const niveis = document.querySelectorAll(".nivel")
+
+            for (i = 0; i < niveis.length; i++) {
+                niveis[i].style.display = "none"
+            };
+
+            var nivel = document.querySelector(classNivel)
+            if (nivel.style.display === "none") {
+                nivel.style.display = "block";
+            } else {
+                nivel.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

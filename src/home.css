@@ -1,0 +1,208 @@
+/* Reset de caja */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo global del cuerpo */
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 99%;
+    margin: 100px 0 0 0;
+    padding: 20px;
+    min-height: 100%;
+    
+}
+
+/* Encabezado fijo */
+header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 64px;
+    background-color: goldenrod;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Menú de navegación */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 2px;
+    display: inline-block;
+}
+
+header ul {
+    display: flex;
+    gap: 64px;
+    font-weight: 560;
+    padding-right: 150px;
+}
+
+header ul a {
+    text-decoration: none;
+    color: black;
+    padding: 2px;
+}
+
+header ul a:hover {
+    border-bottom: 1px solid #000000;
+
+}
+
+/* Banner */
+.banner {
+    background-color: #ffffff;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+    font-size: 24px;
+    width: 80%;
+    margin: auto;
+    
+}
+
+/* Descripción */
+.descricao {
+    float: left;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ejercicios */
+.exercicios {
+    margin-top: 20px;
+}
+
+/* Descripción de ejercicios */
+.desc-exe {
+    
+    padding: 10px;
+}
+
+/* Lista de niveles */
+.lista-niveis {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-niveis li {
+    display: block; 
+    margin-bottom: 10px;
+}
+
+
+/* Adicione estas regras no seu arquivo CSS */
+
+/* Estilo base para os botões */
+.bnt button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: goldenrod;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estilo ao passar o mouse sobre os botões */
+.bnt button:hover {
+    background-color: #ffd700; /* Tom mais claro de dourado */
+}
+
+/* Estilo para o botão ativo/selecionado */
+.bnt button.active {
+    background-color: #ffcc00; /* Tom de destaque para indicar seleção */
+}
+
+/* Nivel */
+.nivel {
+    margin-top: 20px;
+}
+
+h3, h4 {
+    text-align: center;
+    
+}
+
+
+/* Videos */
+.videos {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: 20px;
+    gap: 150px;
+}
+
+.video {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.video1 {
+    width: 30%; 
+}
+
+/* Material */
+.material {
+    margin-top: 20px;
+    
+}
+
+/* Diseño responsivo */
+@media only screen and (max-width: 1200px) {
+
+    
+    header {
+        padding: 16px 32px;
+    }
+
+    .banner {
+        font-size: larger;
+    }
+
+    .descricao {
+        width: 60%;
+    }
+
+    .videos {
+        
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .video1 {
+        margin: auto;
+        width: 70vw;
+    }
+}
